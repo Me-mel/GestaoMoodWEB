@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gestaomoodweb.service;
 
-/**
- *
- * @author Mel
- */
+import gestaomoodweb.dao.UsuarioDAO;
+
 public class LoginService {
     
+    private final UsuarioDAO usuarioDAO;
+    
+    public LoginService(){usuarioDAO = new UsuarioDAO();}
+    
+    public boolean login(String usuario, String senha){
+        return usuarioDAO.login(usuario, senha);
+    }
 }
