@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gestaomoodweb.service;
 
-/**
- *
- * @author Mel
- */
+import gestaomoodweb.dao.ClienteDAO;
+import gestaomoodweb.model.Cliente;
+
 public class ClienteService {
     
+    private final ClienteDAO clienteDAO;
+    
+    public ClienteService() {clienteDAO = new ClienteDAO();}
+    
+    public void cadastrar(Cliente cliente) {clienteDAO.cadastrar(cliente);}
 }
