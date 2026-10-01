@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gestaomoodweb.service;
 
-/**
- *
- * @author Mel
- */
+import gestaomoodweb.model.Vendas;
+import gestaomoodweb.dao.VendasDAO;
+
 public class VendaService {
     
-}
+    private final VendasDAO vendasDAO;
+    
+    public VendaService(){vendasDAO = new VendasDAO();}
+    
+    public void registrar(Vendas vendas){vendasDAO.registrar(vendas);}
+    }
+
